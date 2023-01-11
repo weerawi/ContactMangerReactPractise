@@ -9,16 +9,20 @@ const ContactCard = (props) => {
         className="ui avatar image"
         src={user}
         alter="user"
-        style={({ width: "40px" }, { height: "40px" })}
+        style={({ width: "auto" }, { height: "auto" }, { margin: "15px" })}
       />
-      <div className="content" style={{ marginLeft: "17px" }}>
+      <div
+        className="content"
+        style={({ marginLeft: "17px" }, { margin: "15px" })}
+      >
         <div className="header">{name}</div>
         <div>{email}</div>
         <div>{PNumber}</div>
       </div>
       <i
         className="ui right floated trash alternate red outline icon"
-        style={{ marginTop: "17px" }} //style={{ color: "red" }}
+        style={{ paddingTop: "27px" }}
+        onClick={() => props.clickHandler(id)} //style={{ color: "red" }}
       ></i>
     </div>
   );
